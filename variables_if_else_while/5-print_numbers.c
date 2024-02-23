@@ -1,0 +1,14 @@
+#include <stdio.h>
+/**
+ * main - Prints all single digit numbers of base 10 startting from 0.
+ *
+ * Return: Always o.
+ */
+int main(void)
+{
+	int num;
+	for (num = 0; num < 10)
+		printf("%d",num);
+	printf("\n");
+	return (0);
+}
