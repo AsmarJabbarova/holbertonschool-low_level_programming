@@ -1,4 +1,4 @@
-#inlude <stdio.h>
+#include <stdio.h>
 /**
  * main -Prints the alphabet in lowercase, then in uppercase.
  *
@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	cahr c = 'a';
+	char c = 'a';
 	while (c <= 'z')
 	{
 		if (c != 'q' && c != 'e')
