@@ -7,6 +7,7 @@ void more_numbers(void)
 {
 	int i = 0, j = 0;
 	char a [] = "1234567891011121314";
+
 	while (i < 10)
 	{
 		while (a[j] != '\0')
