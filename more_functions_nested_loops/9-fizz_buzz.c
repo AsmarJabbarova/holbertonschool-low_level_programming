@@ -30,6 +30,6 @@ int main(void)
 		if (i != 100)
 			printf("");
 	}
-	putchar('\n')
+	putchar('\n');
 		return (0);
 }
