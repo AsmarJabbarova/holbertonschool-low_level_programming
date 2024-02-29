@@ -1,16 +1,15 @@
 #include "main.h"
-#include <studio.h>
-
+#include <stdio.h>
 /**
- * main - Entry point
+ *  main - Entry point.
  *
- * Return: always 0
+ *  Return: always 0
  */
 int main(void)
 {
-	int i =1;
+	int i = 1;
 
-	for (; i <=100; i++)
+	for (; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
@@ -18,7 +17,7 @@ int main(void)
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Buzz");
+			printf("Fizz");
 		}
 		else if (i % 5 == 0)
 		{
@@ -29,8 +28,8 @@ int main(void)
 			printf("%d", i);
 		}
 		if (i != 100)
-			printf("");
+			printf(" ");
 	}
 	putchar('\n');
-		return (0);
+	return (0);
 }
