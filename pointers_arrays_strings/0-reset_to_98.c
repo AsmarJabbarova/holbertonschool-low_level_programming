@@ -1,17 +1,9 @@
-#include <string.h>
+#include "main.h"
 /**
- * _strcat - connect strings
- * @dest: destination
- * @src: source
- * Return: new string
+ *reset_to_98 - value 98
+ *@n:pointer
  */
-char *_strcat(char * dest, char *src)
+void reset_to_98(int *n)
 {
-	int i = 0, n = strlen(dest);
-
-	do {
-		*(dest + n +i) = *(src + i)
-			i++;
-	} while (*(src + i) != '\0');
-	return (dest);
+	*n = 98;
 }
