@@ -1,16 +1,14 @@
 #include "main.h"
-
 /**
- * _puts - prints a string to stdout
- * @str: pointer to the string to print
+ * print_numbers - that print numbers
  */
-void _puts(char )
+void print_numbers(void)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (; i < 10; i++)
 	{
-		_putchar(str[i]);
+		_putchar(48 + i);
 	}
 	_putchar('\n');
 }
