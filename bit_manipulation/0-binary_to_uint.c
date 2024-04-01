@@ -1,29 +1,44 @@
-#include "holberton.h"
+#include <string.h>
 
 /**
- * binary_to_uint - converts a binary number to an unsigned int.
- * @b: pointing to a string of 0 and 1 chars.
- * Return: the converted number (sucess), or 0 (error).
+ * power_of_2 - finds power of 2 using given power rate.
+ *
+ * @n: power rate.
+ *
+ * Return: the result of operation.
  */
+
+unsigned int power_of_2(unsigned int n)
+{
+	unsigned int result = 1;
+
+	while (n > 0)
+		n--, result *= 2;
+	return (result);
+}
+
+/**
+ * binary_to_uint - converts binary code to unsigned int type.
+ *
+ * @b: pointer to first element of string.
+ *
+ * Return: 10 based value of binary code.
+ */
+
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0;
-	unsigned int power = 1;
-	int i = 0;
+	unsigned int sum = 0, counter = 0, len;
 
 	if (!b)
 		return (0);
-	while (b[i])
-		i++;
-	i--;
-	while (i >= 0)
+	len = strlen(b);
+	while (*(b + counter))
 	{
-		if (b[i] != '0' && b[i] != '1')
+		counter++;
+		if (*(b + counter - 1) == '1')
+			sum += power_of_2(len - counter);
+		else if (*(b + counter - 1) != '0')
 			return (0);
-		if (b[i] == '1')
-			sum += power;
-		i--;
-		power += power;
 	}
 	return (sum);
 }
